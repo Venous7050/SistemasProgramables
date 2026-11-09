@@ -1,22 +1,22 @@
-# 🍞 MasaViva: Incubadora Inteligente para Masa Madre (IoT) — Sprint 1
+# MasaViva: Incubadora Inteligente para Masa Madre (IoT) — Sprint 1
 
 > **Tecnología + Pan = Mejor fermentación**  
 > Sistema embebido e IoT basado en **ESP32** para el control térmico automatizado (24–28 °C), monitoreo de crecimiento por ultrasonido, detección de apertura de tapa y telemetría en tiempo real mediante **MQTT** y **Firebase Realtime Database**.
 
 ---
 
-## 📋 Datos del Proyecto
+##  Datos del Proyecto
 
 - **Materia:** Sistemas Programables
 - **Institución:** Tecnológico Nacional de México / Instituto Tecnológico de León
 - **Carrera:** Ingeniería en Sistemas Computacionales
-- **Estudiante:** Diego Alejandro Morales Vega (`@Venous7050`)
+- **Estudiante:** - **Estudiante:** Diego Alejandro Morales Vega, Juan Pablo Mateo Vazquez Ortega, Christopher Leonardo Troncoso Ponce
 - **Docente:** Ma. Verónica Tapia Ibarra
 - **Entrega:** Sprint 1 — Integración de Sensores, Actuadores, Control Térmico y Telemetría IoT
 
 ---
 
-## 🎯 Problema que Resuelve
+##  Problema que Resuelve
 
 La masa madre necesita una temperatura estable (**24 °C – 28 °C**), humedad adecuada y utilizarse en el momento exacto de máximo crecimiento. En casa o en pequeñas panaderías artesanales, la temperatura ambiente varía constantemente y es difícil saber cuándo la masa duplicó su volumen, provocando panes que no suben o masa sobrefermentada.
 
@@ -24,7 +24,7 @@ La masa madre necesita una temperatura estable (**24 °C – 28 °C**), humedad 
 
 ---
 
-## 🔌 Topología de Hardware y Mapa de Pines (Pinout ESP32 DevKit)
+##  Topología de Hardware y Mapa de Pines (Pinout ESP32 DevKit)
 
 | Componente | Tipo | Pin del Módulo | Pin en ESP32 DevKit | Función en el Sistema |
 | :--- | :--- | :--- | :--- | :--- |
@@ -39,7 +39,7 @@ La masa madre necesita una temperatura estable (**24 °C – 28 °C**), humedad 
 
 ---
 
-## 📡 Arquitectura de Comunicación IoT (MQTT + Firebase)
+##  Arquitectura de Comunicación IoT (MQTT + Firebase)
 
 ### 1. Tópicos MQTT (`test.mosquitto.org:1883`)
 
@@ -62,14 +62,14 @@ Cada 15 segundos el sistema envía un objeto JSON vía REST (`HTTPS PUT / POST`)
 
 ---
 
-## 📂 Estructura del Repositorio (Sprint 1)
+##  Estructura del Repositorio (Sprint 1)
 
 ```text
-📦 MasaViva_Sprint1
- ┣ 📂 pruebas
- ┃ ┣ 📜 test_dht11.py        # Prueba unitaria del sensor de temperatura y humedad DHT11 (Pin D4)
- ┃ ┣ 📜 test_rele.py         # Prueba unitaria de conmutación del módulo Relé (Pin D26)
- ┃ ┗ 📜 test_ultrasonico.py  # Prueba unitaria de medición de distancia HC-SR04 (Pines D5 y D18)
- ┣ 📜 main.py                # Firmware principal integrado (Sensores + Actuadores + MQTT + Firebase)
- ┗ 📜 README.md              # Documentación técnica del Sprint 1
+MasaViva_Sprint1
+ ┣  pruebas
+ ┃ ┣  test_dht11.py        # Prueba unitaria del sensor de temperatura y humedad DHT11 (Pin D4)
+ ┃ ┣  test_rele.py         # Prueba unitaria de conmutación del módulo Relé (Pin D26)
+ ┃ ┗  test_ultrasonico.py  # Prueba unitaria de medición de distancia HC-SR04 (Pines D5 y D18)
+ ┣  main.py                # Firmware principal integrado (Sensores + Actuadores + MQTT + Firebase)
+ ┗  README.md              # Documentación técnica del Sprint 1
 ```
